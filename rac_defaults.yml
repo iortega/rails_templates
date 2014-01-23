@@ -1,0 +1,36 @@
+recipes:
+- railsapps
+
+prefs:
+  :dev_webserver: thin
+  :prod_webserver: unicorn
+  :database: postgresql
+  :templates: slim
+  :unit_test: rspec
+  :integration: cucumber
+  :fixtures: factory_girl
+  :frontend: bootstrap3
+  :form_builder: simple_form
+  :email: sendgrid
+  :authentication: devise
+  :devise_modules: invitable
+  :authorization: cancan
+  :starter_app: users_app
+  :continuous_testing: none
+  :ban_spiders: true
+  :github: false
+  :local_env_file: true
+  :quiet_assets: true
+  :better_errors: true
+  :rvmrc: false
+  :pg_username:
+  :drop_database: true
+  :apps4: none
+
+gems:
+- nokogiri
+- kaminari
+
+args:
+  :skip_test_unit: no
+  :skip_active_record: false
