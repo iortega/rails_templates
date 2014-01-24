@@ -28,6 +28,13 @@ require 'simplecov'
 CODE
 end
 
+inject_into_file 'features/support/env.rb', after: 'require \'cucumber/rails\'' do
+<<-CODE
+
+require 'simplecov'
+CODE
+end
+
 file '.simplecov', <<-CODE
   class LineFilter < SimpleCov::Filter
     def matches?(source_file)
