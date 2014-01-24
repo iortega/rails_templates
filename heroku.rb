@@ -84,6 +84,9 @@ after_fork do |server, worker|
 end
 CODE
 
+gem 'rack-timeout'
+bundle_install
+
 initializer 'timeout.rb', <<-CODE
 Rack::Timeout.timeout = 10
 CODE
